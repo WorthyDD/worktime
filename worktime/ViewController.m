@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "NSDate+Day.h"
+#import "NSDate+ChineseDate.h"
 
 @interface ViewController ()
 
@@ -25,7 +27,7 @@
     _items = @[@"一值", @"二值", @"三值", @"四值", @"五值"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    _normalDate = [formatter dateFromString:@"2016-09-19 01:00:24"];
+    _normalDate = [formatter dateFromString:@"2016-09-19 00:00:01"];
     _index = 1;
     [self updateTextWithDate:_datePicker.date];
 }
@@ -43,18 +45,19 @@
     [formatter setDateFormat:@"yyyy年MM月dd日  EEEE"];
     NSString *dateStr = [formatter stringFromDate:date];
     //    [_content setText:dateStr];
-    
+    //农历
+    NSString *chineseDate = [date getChineseCalendar];
     //计算相差天数
-    NSInteger day = [date timeIntervalSinceDate:_normalDate]/(3600*24);
+    NSInteger day = [date daysSinceDay:_normalDate];
     if(day < 0){
         day = day + (labs(day)/_items.count+1)*_items.count;
     }
-    NSUInteger index1 = (day+_index)%(_items.count);
+    NSUInteger index1 = ((day+_index)%(_items.count)*3+3)%(_items.count);
 //    NSLog(@"index1--%ld, %d, %d", index1, (-1%5), (-2%5));
     NSInteger index2 = (index1+1)%(_items.count);
     NSInteger index3 = (index2+1)%(_items.count);
     NSString *work = [NSString stringWithFormat:@"%@后夜  %@白班  %@前夜", _items[index1], _items[index2], _items[index3]];
-    NSString *show = [NSString stringWithFormat:@"%@\n%@", dateStr, work];
+    NSString *show = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", dateStr, chineseDate, work];
     [_content setText:show];
 }
 @end

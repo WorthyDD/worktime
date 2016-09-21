@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-Sl-yOH">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-Sl-yOH">
                                 <rect key="frame" x="0.0" y="84" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="495997224.307473">
                                     <!--2016-09-19 17:00:24 +0000-->
@@ -29,7 +29,7 @@
                                     <action selector="dateChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="DUX-xL-STk"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星期二 2016-09-20" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEK-vT-KZ4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星期二 2016-09-20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEK-vT-KZ4">
                                 <rect key="frame" x="15" y="350" width="290" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +46,7 @@
                             <constraint firstItem="QEK-vT-KZ4" firstAttribute="top" secondItem="5ep-Sl-yOH" secondAttribute="bottom" constant="50" id="sQH-fY-2WK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="worktime" id="R7q-6o-0xP"/>
+                    <navigationItem key="navigationItem" title="倒班查询" id="R7q-6o-0xP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="content" destination="QEK-vT-KZ4" id="Sba-1u-WXj"/>

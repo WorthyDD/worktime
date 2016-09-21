@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC661C971D9241B400B55DA7 /* NSDate+Day.m in Sources */ = {isa = PBXBuildFile; fileRef = CC661C961D9241B400B55DA7 /* NSDate+Day.m */; };
+		CC661C9A1D92435500B55DA7 /* NSDate+ChineseDate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC661C991D92435500B55DA7 /* NSDate+ChineseDate.m */; };
 		CC67D3F91D90F7EC009A421A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67D3F81D90F7EC009A421A /* main.m */; };
 		CC67D3FC1D90F7EC009A421A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67D3FB1D90F7EC009A421A /* AppDelegate.m */; };
 		CC67D3FF1D90F7EC009A421A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC67D3FE1D90F7EC009A421A /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC661C951D9241B400B55DA7 /* NSDate+Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Day.h"; sourceTree = "<group>"; };
+		CC661C961D9241B400B55DA7 /* NSDate+Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Day.m"; sourceTree = "<group>"; };
+		CC661C981D92435500B55DA7 /* NSDate+ChineseDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ChineseDate.h"; sourceTree = "<group>"; };
+		CC661C991D92435500B55DA7 /* NSDate+ChineseDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ChineseDate.m"; sourceTree = "<group>"; };
 		CC67D3F41D90F7EC009A421A /* worktime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worktime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC67D3F81D90F7EC009A421A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC67D3FA1D90F7EC009A421A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +109,10 @@
 			children = (
 				CC67D3FA1D90F7EC009A421A /* AppDelegate.h */,
 				CC67D3FB1D90F7EC009A421A /* AppDelegate.m */,
+				CC661C951D9241B400B55DA7 /* NSDate+Day.h */,
+				CC661C961D9241B400B55DA7 /* NSDate+Day.m */,
+				CC661C981D92435500B55DA7 /* NSDate+ChineseDate.h */,
+				CC661C991D92435500B55DA7 /* NSDate+ChineseDate.m */,
 				CC67D3FD1D90F7EC009A421A /* ViewController.h */,
 				CC67D3FE1D90F7EC009A421A /* ViewController.m */,
 				CC67D4001D90F7EC009A421A /* Main.storyboard */,
@@ -273,7 +283,9 @@
 			files = (
 				CC67D3FF1D90F7EC009A421A /* ViewController.m in Sources */,
 				CC67D3FC1D90F7EC009A421A /* AppDelegate.m in Sources */,
+				CC661C9A1D92435500B55DA7 /* NSDate+ChineseDate.m in Sources */,
 				CC67D3F91D90F7EC009A421A /* main.m in Sources */,
+				CC661C971D9241B400B55DA7 /* NSDate+Day.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,11 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = worktime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxkuaipao.worktime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,11 +442,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = worktime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xxkuaipao.worktime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -501,6 +517,7 @@
 				CC67D4231D90F7ED009A421A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC67D4241D90F7ED009A421A /* Build configuration list for PBXNativeTarget "worktimeTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +526,7 @@
 				CC67D4261D90F7ED009A421A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC67D4271D90F7ED009A421A /* Build configuration list for PBXNativeTarget "worktimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +535,7 @@
 				CC67D4291D90F7ED009A421A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
